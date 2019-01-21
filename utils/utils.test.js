@@ -31,3 +31,10 @@ it('it should set our firstname and lastname',()=>{
 		lastName:'bidari'
 	});
 });
+
+it('should asyncAdd two numbers',(done)=>{
+	utils.asyncAdd(4,3,(sum)=>{
+		expect(sum).toBe(7).toBeA('number');
+		done();
+	});
+});
